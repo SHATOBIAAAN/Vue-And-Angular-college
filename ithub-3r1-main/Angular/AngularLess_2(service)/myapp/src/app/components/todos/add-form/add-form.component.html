@@ -1,0 +1,12 @@
+<!-- ngModel позволяет реактивно менять title в случае изменения инпута -->
+<div class="input_elem">
+    <input 
+        [(ngModel)]="title" 
+        (keydown)="addHandle($event)" 
+    />
+</div>
+
+<!-- 
+Доп. условие можно указать сразу после события через точку, минуя допонлительынй код (условие) внутри компонена
+(keydown.enter)="addHandle($event)" 
+-->

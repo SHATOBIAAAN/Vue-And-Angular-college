@@ -1,0 +1,42 @@
+Часть # 1
+1) Создание приложения 
+  ng new myapp
+Без файлов роутинга 
+ ng new myapp --routing=false
+2) запуск приложения
+  cd myapp
+  ng serve
+2) Cоздание комопнента 
+  ng generate component components/user-card 
+или более сокращенно 
+  ng g c components/user-card  
+создание компонента без файла тестирование (по желанию, не обязательно)
+  ng g c --skip-tests=true components/user-card 
+
+-----------------------------------------------
+создание кастомного пайпа
+    ng g p --skip-tests=true pipes/reverse-pipe
+
+-----------------------------------------------
+создание сервис
+    ng g s --skip-tests=true services/todo
+
+-------------------------------------------------
+Часть # 2
+Конфигарурация приложения (angular.json)
+1. Инициализация папки src/assets также требует декларации файла в настройках приложения по примеру:
+    "assets": [
+      "src/assets",
+      {
+        "glob": "**/*",
+        "input": "public"
+      }
+    ],
+    <img alt="Image example" src="assets/images/image.jpg"/>
+
+
+2. Для получения пропсов без TS капризов, открываем tsconfig.json и объявляем новую запись: 
+   "compilerOptions": {
+    "strictPropertyInitialization": false,
+    ... 
+   }

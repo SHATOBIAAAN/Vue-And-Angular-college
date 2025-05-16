@@ -1,0 +1,13 @@
+
+
+.todo_item{
+    margin: 20px 150px;
+    padding: 20px;
+    border: 1px solid black;
+}
+
+.input_elem{
+    margin: 20px 150px;
+    display: flex;
+    justify-content: center;
+}

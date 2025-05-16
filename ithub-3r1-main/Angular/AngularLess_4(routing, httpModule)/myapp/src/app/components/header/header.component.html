@@ -1,0 +1,46 @@
+<style>
+    header {
+        padding: 40px 20px;
+        background-color: antiquewhite;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .logo{
+        width: 40px;
+        height: 40px;
+
+        border-radius: 50% ;
+        background-color: brown;
+    }
+    .menu_wrapper{
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 25px;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    a.active {
+        color: purple;
+        text-decoration: underline 
+    }
+</style>
+
+<header>
+    <div class="logo"></div>
+    <ul class="menu_wrapper">
+        @for(elem of menuList; track elem.id){
+            <li>
+                <a [routerLink]="elem.path" routerLinkActive="active">{{elem.title}}</a>
+                <!-- <a routerLink="/page/link" > Page component ...</a> -->
+            </li>
+        }
+    </ul>
+</header>

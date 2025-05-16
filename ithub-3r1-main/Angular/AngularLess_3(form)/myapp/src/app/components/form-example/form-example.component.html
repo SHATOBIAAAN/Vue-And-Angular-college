@@ -1,0 +1,28 @@
+<form [formGroup]="userForm" (ngSubmit)="handleSubmit()">
+    <div>
+        <label>
+            First name
+            <input formControlName="firstName" />
+        </label>
+            @if(submited && userForm.controls['firstName'].errors?.['required']){
+                <p [style]="{color: 'red'}">Имя обязательное!</p>
+            } @else if(submited && userForm.controls['firstName'].errors?.['minlength']){
+                <p [style]="{color: 'red'}">Минимальная длина - 4!</p>
+            }
+    </div>
+    <div>
+        <label>
+            Age
+            <input type="number" formControlName="age" />
+        </label>
+        @if(submited && userForm.controls['age'].errors?.['required']){
+            <p [style]="{color: 'red'}">Возраст обязательный!</p>
+        } @else if (submited && userForm.controls['age'].errors?.['max']){
+            <p [style]="{color: 'red'}">Максимальное знаение - 100!</p>
+        } @else if (submited && userForm.controls['age'].errors?.['min']){
+            <p [style]="{color: 'red'}">Минимальное знаение - 1!</p>
+        }
+    </div>
+    <!-- <input type="submit" [disabled]="!userForm.valid"/> -->
+    <input type="submit" />
+</form>

@@ -1,0 +1,36 @@
+{
+    "name": "Tech Shop",
+    "short_name": "Tech",
+    "start_url": "./",
+    "scope": "./",
+    "theme_color": "#1A73E8", 
+    "background_color": "#FFFFFF", 
+    "display": "standalone",
+    "description": "Your one-stop shop for the latest tech gadgets",
+    "icons": [
+      {
+        "src": "./tech-icon.png",  
+        "sizes": "512x512",
+        "type": "image/png"
+      },
+      {
+        "src": "./tech-icon.png",  
+        "sizes": "1024x1024",
+        "type": "image/png"
+      },
+      {
+        "src": "./tech-icon.png",  
+        "sizes": "512x512",
+        "type": "image/png",
+        "purpose": "maskable"
+      }
+    ],
+    "screenshots": [
+      {
+        "src": "./tech-screenshot.png",  
+        "sizes": "1170x2532",
+        "type": "image/png"
+      }
+    ]
+  }
+  

@@ -1,0 +1,9 @@
+<div>
+    @for(todo of todos; track todo.id){
+        <app-todo-item
+            [title]="todo.title"
+            [id]="todo.id"
+            [completed]="todo.completed"
+        />
+    }
+</div>

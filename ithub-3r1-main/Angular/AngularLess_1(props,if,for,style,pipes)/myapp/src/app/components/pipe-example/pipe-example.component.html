@@ -1,0 +1,37 @@
+<div>
+    <div>
+        <h2>{{  title }}</h2>
+        <p>{{ title | lowercase }}</p>
+        <p>{{ title | uppercase }}</p>
+    </div>
+
+    <div>
+        <h2>{{  currentDate }}</h2>
+        <p>{{ currentDate | date}}</p>
+        <p>{{ currentDate | date: 'yyyy-MM-dd' }}</p>
+        <p>{{ currentDate | date: 'yyyy-MM-dd HH:mm:ss' }}</p>
+        <p>{{ currentDate | date: 'fullDate' }}</p>
+        <!-- Комбинация пайпов -->
+        <p>{{ currentDate | date: 'fullDate'| uppercase }}</p>
+    </div>
+
+    <div>
+        <h2>{{  price }}</h2>
+        <p>{{ price | currency}}</p>
+        <p>{{ price | currency : 'EUR'}}</p>
+        <p>{{ price | currency : 'EUR' : 'code'}}</p>
+        <p>{{ price | percent : '1.4'}}</p>
+        <p>{{ 0.561234567 | number: '1.1-5' }}</p>
+        <p>{{ 561234567 | number: '.0' }}</p>
+    </div>
+
+    <div>{{ {name: 'Tigran'} }}</div>
+    <div>{{ {name: 'Tigran'} | json }} <div>
+
+    <!-- Custom pipes -->
+    <div>
+        <p>{{ title | reverse }} </p>
+        <p>{{ title | initCap }} </p>
+    </div>
+
+</div>

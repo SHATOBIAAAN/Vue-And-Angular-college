@@ -1,0 +1,15 @@
+.number_color {
+    color:blueviolet
+}
+
+.light {
+    padding: 15px;
+    color: black;
+    background-color: bisque;
+}
+
+.dark {
+    padding: 15px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(56, 22, 22);
+}

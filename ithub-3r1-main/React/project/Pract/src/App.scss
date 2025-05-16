@@ -1,0 +1,54 @@
+:root {
+    --primaryColor: #28a745; 
+    --secondaryColor: #007bff; 
+    --lightGray: #f4f4f4; 
+    --darkGray: #6c757d; 
+    --gray: #868e96; 
+    --dark: #343a40; 
+    --white: #ffffff; 
+    --hoverColor: #0056b3; 
+    --disabledColor: #d6d8db; 
+    --borderColor: #ced4da; 
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &:hover {
+        color: var(--hoverColor); 
+    }
+}
+
+.container {
+    padding: 0 40px;
+    margin-top: 80px;
+    background-color: var(--white); 
+
+    h1:first-child {
+        margin-bottom: 40px;
+        font-size: 2.5rem;
+        font-weight: 600;
+        color: var(--dark);
+
+        @media screen and (max-width: 1200px) {
+            margin-bottom: 30px;
+        }
+
+        @media screen and (max-width: 900px) {
+            margin-bottom: 20px;
+            font-size: 2rem; 
+        }
+    }
+
+    @media screen and (max-width: 1200px) {
+        padding: 0 30px;
+        margin-top: 60px;
+    }
+
+    @media screen and (max-width: 900px) {
+        padding: 0 20px;
+        margin-top: 40px;
+    }
+}

@@ -1,0 +1,9 @@
+<div class="main">
+    <ul>
+        @for (product of productService.productList; track product.id){
+        <li>
+            <a [routerLink]="`/about/${product.id}`">{{product.title}}</a>
+        </li>
+        }
+    </ul>
+</div>

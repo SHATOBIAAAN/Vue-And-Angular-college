@@ -1,0 +1,8 @@
+<div 
+    class="todo_item" 
+    [style.backgroundColor]="(completed) ? 'green' : 'red'"
+    (dblclick)="deleteTodo()"
+    (click)="changeTodo()"
+>
+    <p>{{title}}</p>
+</div>
